@@ -1,1 +1,34 @@
-<h1>Signed NGINX Container by brandenp88</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Secure NGINX Container</title>
+    <link rel="stylesheet" href="/assets/styles.css" integrity="sha384-ofa7qxYcxwpZF0IHdZtYyFgR9QcNEV02vXZlRloZPRVgHexJE6+ZlmAlnJZJBsu1" crossorigin="anonymous" />
+  </head>
+  <body>
+    <header class="hero">
+      <h1>Hardened NGINX Distribution</h1>
+      <p>Your traffic is served by a minimal, verified container image configured with defense-in-depth defaults.</p>
+    </header>
+    <main>
+      <section>
+        <h2>Security Features</h2>
+        <ul>
+          <li>Content delivered with strict security headers (CSP, HSTS, COOP/COEP, CORP).</li>
+          <li>Nginx runs as an unprivileged user on a high port to avoid root access.</li>
+          <li>Requests limited to safe HTTP verbs and hardened buffer limits.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Supply Chain Integrity</h2>
+        <p>The published Docker image is signed with Sigstore Cosign. Verify before deploying:</p>
+        <pre><code>cosign verify docker.io/brandenp88/nginx-secure:latest</code></pre>
+      </section>
+    </main>
+    <footer>
+      <small>&copy; 2024 Secure Containers Initiative</small>
+    </footer>
+  </body>
+</html>
